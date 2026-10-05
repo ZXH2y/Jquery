@@ -8,8 +8,21 @@
 </head>
 
 <body>
-
+    <h1>Where you wanna go?</h1>
+    <ul>
+        <li class="parepare">Parepare</li>
+        <li>Makassar</li>
+        <li id="ngawi">Ngawii</li>
+    </ul>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log('Jquery sudah jalan');
+            $(`li`).text(`puqi kalian`); //target semua li
+            $(`.parepare`).text(`munafik`); // target class
+            $(`#ngawi`).text(`ambatukam`); // target id
+        });
+    </script>
 </body>
 
 </html>
