@@ -5,6 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .liba {
+            background-color: blue;
+            height: 20vh;
+            width: 40vh;
+            margin: 10vh auto;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: -40px 60px 40px;
+        }
+
+        .keLiba,
+        .hapusLiba {
+            text-align: center;
+            font-size: small;
+            background-color: turquoise;
+            margin: 5px;
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 4px;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,11 +45,16 @@
     </ul>
     <h4>Kecamatan</h4>
     <ol id="Kecamatan">
-        <li>Curio</li>
+        <li class="curio">Curio</li>
         <li>Ujung</li>
         <li>Ujung Pandang</li>
-
     </ol>
+
+    <div class="liba">
+        <button class="keLiba">Liba</button>
+        <button class="hapusLiba">Hapus</button>
+    </div>
+
 
     <input type="text" class="inputan" value="Puqi ngana">
 
@@ -55,6 +87,14 @@
             console.log($('.medan').html());
             console.log($('.inputan').val());
 
+
+            $('.keLiba').on('click', function () {
+                alert('Dusun Liba, solid solid solid');
+            });
+            $('.hapusLiba').on('click', function () {
+                $('.curio').remove();
+                alert('Curio dihapus :(');
+            });
 
         });
     </script>
