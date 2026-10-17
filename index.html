@@ -21,7 +21,14 @@
         }
 
         .keLiba,
-        .hapusLiba {
+        .hapusLiba,
+        .hideLiba,
+        .btn-fadeout,
+        .btn-slide-up,
+        .btn-toggle,
+        .btn-fadeToggle,
+        .btn-slideToggle,
+        .btn-animate {
             text-align: center;
             font-size: small;
             background-color: turquoise;
@@ -41,7 +48,14 @@
         <li class="ambasing">Ambasing</li>
         <li>Makassar</li>
         <li id="ngawi">Ngawii</li>
-        <li class="medan">Medan</li>
+        <li class="contoh1">Hide example</li>
+        <li class="contoh2">FadeOut example</li>
+        <li class="contoh3">Slide up example</li>
+        <li class="contoh4">Toogle example</li>
+        <li class="contoh5">Fade toggle</li>
+        <li class="contoh6">Slide Toggle</li>
+        <li class="contoh7">Animate</li>
+
     </ul>
     <h4>Kecamatan</h4>
     <ol id="Kecamatan">
@@ -53,7 +67,14 @@
     <div class="liba">
         <button class="keLiba">Liba</button>
         <button class="hapusLiba">Hapus</button>
+        <button class="hideLiba" id="hideLiba">Button hide</button>
     </div>
+    <button class="btn-fadeout" id="btn-fadeout">FadeOut Button</button>
+    <button class="btn-slide-up" id="btn-slide-up">slide Up Button</button>
+    <button class="btn-toggle" id="btn-toggle">button toggle</button>
+    <button class="btn-fadeToggle" id="btn-fadeToggle">button fade toggle</button>
+    <button class="btn-slideToggle" id="btn-slideToggle">button slide toggle</button>
+    <button class="btn-animate" id="btn-animate">button animate</button>
 
 
     <input type="text" class="inputan" value="Puqi ngana">
@@ -94,6 +115,35 @@
             $('.hapusLiba').on('click', function () {
                 $('.curio').remove();
                 alert('Curio dihapus :(');
+            });
+
+            // Example Jqury animation hide
+            $('#hideLiba').on('click', function () {
+                $('.contoh1').hide(500);
+            });
+            $('#btn-fadeout').on('click', function () {
+                $('.contoh2').fadeOut(500);
+            });
+            $('#btn-slide-up').on('click', function () {
+                $('.contoh3').slideUp(500);
+            });
+            $('#btn-toggle').on('click', function () {
+                $('.contoh4').toggle(500);
+            });
+            $('#btn-fadeToggle').on('click', function () {
+                $('.contoh5').fadeToggle(500);
+            });
+            $('#btn-slideToggle').on('click', function () {
+                $('.contoh6').slideToggle(500);
+            });
+            // menurut gw yang spesial tuh yang ini animate soalnya bisa di kreasikan dengan css.
+            $('#btn-animate').on('click', function () {
+                $('.contoh7').css('background-color', 'red').animate({
+                    marginLeft: 100,
+                    width: '300px',
+                    height: '600px',
+                    opacity: 0.5
+                }, 1000);
             });
 
         });
