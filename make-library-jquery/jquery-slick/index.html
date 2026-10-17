@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Pake jquer</title>
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <style>
+        .gambar-carosel{
+            width: 70%;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="gambar-carosel">
+        <div>Isi konten 1
+            <img src="https://plus.unsplash.com/premium_photo-1716208821770-c7042ce37492?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" alt="">
+        </div>
+        <div>Isi konten 2
+            <img src="https://images.unsplash.com/photo-1783542784557-d57fc42b1893?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D">
+        </div>
+        <div>Isi konten 3
+            <img src="https://plus.unsplash.com/premium_photo-1661589354357-f56ddf86a0b4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"/>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.gambar-carosel').slick({
+                dots: true,
+                infinite: true,
+                speed: 10,
+                slidesToScroll: 1,
+                autoplay: true
+            });
+        });
+    </script>
+</body>
+</html>
