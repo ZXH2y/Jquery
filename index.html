@@ -38,6 +38,21 @@
             border-radius: 10px;
             box-shadow: 10px 10px 4px;
         }
+
+        .spacer {
+            background-color: aqua;
+            margin: 20px;
+            display: block;
+            padding: 10px;
+        }
+
+        .merah {
+            color: red;
+        }
+
+        .biru {
+            color: blue;
+        }
     </style>
 </head>
 
@@ -78,6 +93,23 @@
 
 
     <input type="text" class="inputan" value="Puqi ngana">
+
+    </div>
+
+    <div class="spacer"></div>
+
+
+    <h3>Manipulasi css di jequery</h3>
+
+    <p class="sapa-dia">Hai barudak</p>
+
+    <p class="sapa-balik">Hai Juga Aslole</p>
+
+    <button id="gantiBiru">Ganti biru</button>
+    <button id="gantiMerah">Ganti Merah</button>
+    <button id="gantiBesar">Ganti Besar</button>
+
+
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script>
@@ -145,6 +177,30 @@
                     opacity: 0.5
                 }, 1000);
             });
+
+
+            //
+            // MANIPULASI CSS DALAM JQUERY
+            //
+
+
+            $('.sapa-dia').addClass('merah')
+
+            $('#gantiBiru').on('click', function () {
+                $('.sapa-balik').removeClass('merah');
+                $('.sapa-balik').addClass('biru');
+            });
+            $('#gantiMerah').on('click', function () {
+                $('.sapa-balik').removeClass('biru');
+                $('.sapa-balik').addClass('merah');
+            });
+
+            $('#gantiBesar').on('click', function () {
+                $('.sapa-balik').css({
+                    fontSize: '100px'
+                });
+            });
+
 
         });
     </script>
